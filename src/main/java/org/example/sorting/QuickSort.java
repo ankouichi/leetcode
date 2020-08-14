@@ -55,9 +55,9 @@ public class QuickSort {
 
     static void printArray(int[] arr) {
         for (int value : arr) {
-            System.out.print(value);
-            System.out.println();
+            System.out.print(value + " ");
         }
+        System.out.println();
     }
 
     public static void main(String args[]) {
