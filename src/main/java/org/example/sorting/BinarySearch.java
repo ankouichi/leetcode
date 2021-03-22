@@ -33,7 +33,7 @@ public class BinarySearch {
      */
     int binarySearch(int[] arr, int x) {
         int l = 0, r = arr.length - 1;
-        while ( l <= r) {
+        while (l <= r) {
             int mid = l + (r - l) / 2;
             if (arr[mid] == x)
                 return mid;
