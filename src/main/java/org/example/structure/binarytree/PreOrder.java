@@ -1,4 +1,4 @@
-package org.example.binarytree;
+package org.example.structure.binarytree;
 
 import java.util.*;
 
