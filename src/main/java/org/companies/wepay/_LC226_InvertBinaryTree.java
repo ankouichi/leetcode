@@ -1,23 +1,12 @@
 package org.companies.wepay;
 
+import org.example.binarytree.TreeNode;
+
 /**
  * Created by ankouichi on 3/21/21
  */
 
 public class _LC226_InvertBinaryTree {
-    public static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-        TreeNode() {}
-        TreeNode(int val) { this.val = val; }
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
-    }
-
     public TreeNode invertTree(TreeNode root) {
         TreeNode node = root;
         if (node != null) {

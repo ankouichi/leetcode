@@ -47,7 +47,7 @@ package org.problems;
  * s consists of only English letters (both uppercase and lowercase), digits (0-9), plus '+', minus '-', or dot '.'.
  */
 
-public class _65ValidNumber {
+public class _65_ValidNumber {
     public static void main(String[] args) {
         String s1 = "-90E3";
         System.out.println(s1 + ": " + isNumber(s1));
