@@ -1,30 +1,12 @@
 package org.problems;
 
+import org.example.structure.linkedlist.ListNode;
+
 /**
  * Created by ankouichi on 2/15/21
  */
 
 public class _234_PalindromeLinkedList {
-    /**
-     * Definition for singly-linked list.
-     **/
-    public class ListNode {
-        int val;
-        ListNode next;
-
-        ListNode() {
-        }
-
-        ListNode(int val) {
-            this.val = val;
-        }
-
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
-        }
-    }
-
     ListNode node1 = new ListNode(1, null);
     ListNode node2 = new ListNode(4, node1);
     ListNode node3 = new ListNode(-1, node2);

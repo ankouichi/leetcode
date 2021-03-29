@@ -7,31 +7,6 @@ import org.example.structure.binarytree.TreeNode;
  */
 
 public class _LC226_InvertBinaryTree {
-//    public static class TreeNode {
-//        int val;
-//        TreeNode left;
-//        TreeNode right;
-//        TreeNode() {}
-//        TreeNode(int val) { this.val = val; }
-//        TreeNode(int val, TreeNode left, TreeNode right) {
-//            this.val = val;
-//            this.left = left;
-//            this.right = right;
-//        }
-//    }
-
-    public TreeNode invertTree(TreeNode root) {
-        TreeNode node = root;
-        if (node != null) {
-            TreeNode tmp = node.left;
-            node.left = node.right;
-            node.right = tmp;
-            invertTree(node.left);
-            invertTree(node.right);
-        }
-
-        return root;
-    }
 
     /**
      * Get the height of the tree
