@@ -1,24 +1,12 @@
 package org.companies.wepay;
 
-import org.example.binarytree.TreeNode;
+import org.example.structure.binarytree.TreeNode;
 
 /**
  * Created by ankouichi on 3/21/21
  */
 
 public class _LC226_InvertBinaryTree {
-    public TreeNode invertTree(TreeNode root) {
-        TreeNode node = root;
-        if (node != null) {
-            TreeNode tmp = node.left;
-            node.left = node.right;
-            node.right = tmp;
-            invertTree(node.left);
-            invertTree(node.right);
-        }
-
-        return root;
-    }
 
     /**
      * Get the height of the tree
@@ -65,7 +53,7 @@ public class _LC226_InvertBinaryTree {
         System.out.println("Before Invert: ");
         solution.printLevelOrder(node4);
         System.out.println("After Invert: ");
-        solution.printLevelOrder(solution.invertTree(node4));
+//        solution.printLevelOrder(solution.invertTree(node4));
 
         // case 2: []
     }

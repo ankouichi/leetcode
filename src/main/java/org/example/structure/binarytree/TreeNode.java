@@ -1,4 +1,4 @@
-package org.example.binarytree;
+package org.example.structure.binarytree;
 
 /**
  * Created by ankouichi on 1/29/21
