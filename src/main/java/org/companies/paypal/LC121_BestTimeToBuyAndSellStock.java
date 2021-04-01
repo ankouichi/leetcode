@@ -16,7 +16,7 @@ package org.companies.paypal;
  *
  */
 
-public class _LC121_BestTimeToBuyAndSellStock {
+public class LC121_BestTimeToBuyAndSellStock {
     public static int maxProfit(int[] prices) {
         int min = Integer.MAX_VALUE;
         int max = 0;

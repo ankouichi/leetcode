@@ -26,8 +26,6 @@ public class RyanAndMonicaJob implements Runnable {
 
     }
 
-
-
     class BankAccount {
         private int balance = 100;
 

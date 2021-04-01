@@ -4,7 +4,7 @@ package org.problems;
  * Created by ankouichi on 3/1/21
  */
 
-public class _4_ {
+public class _4_MedianOfTwoSortedArrays {
     public static void main(String[] args) {
         int[] nums1 = { };
         int[] nums2 = { 1 };

@@ -25,7 +25,7 @@ import org.example.structure.linkedlist.ListNode;
  *
  */
 
-public class _LC148_SortList {
+public class LC148_SortList {
     public ListNode sortList(ListNode head) {
         if (head == null || head.next == null)
             return head;
@@ -89,7 +89,7 @@ public class _LC148_SortList {
         ListNode node1 = new ListNode(1, node3);
         ListNode node2 = new ListNode(2, node1);
         ListNode node4 = new ListNode(4, node2);
-        _LC148_SortList solution = new _LC148_SortList();
+        LC148_SortList solution = new LC148_SortList();
         solution.printLinkedList(node4);
 
         System.out.println();

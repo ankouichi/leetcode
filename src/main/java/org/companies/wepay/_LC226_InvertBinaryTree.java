@@ -53,7 +53,7 @@ public class _LC226_InvertBinaryTree {
         System.out.println("Before Invert: ");
         solution.printLevelOrder(node4);
         System.out.println("After Invert: ");
-        solution.printLevelOrder(solution.invertTree(node4));
+//        solution.printLevelOrder(solution.invertTree(node4));
 
         // case 2: []
     }

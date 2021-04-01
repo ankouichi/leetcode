@@ -30,7 +30,7 @@ import java.util.List;
  *
  */
 
-public class _LC46_Permutations {
+public class LC46_Permutations {
     public List<List<Integer>> permute(int[] nums) {
         List<Integer> list = new ArrayList<>();
         for (int x : nums) list.add(x);
@@ -52,7 +52,7 @@ public class _LC46_Permutations {
     }
 
     public static void main(String[] args) {
-        _LC46_Permutations solution = new _LC46_Permutations();
+        LC46_Permutations solution = new LC46_Permutations();
         int[] arr1 = new int[] {1,2,3};
         List<List<Integer>> res = solution.permute(arr1);
         for (List<Integer> list : res) {

@@ -31,7 +31,7 @@ import java.util.LinkedList;
  *
  */
 
-public class _LC56_MergeIntervals {
+public class LC56_MergeIntervals {
     public static int[][] merge(int[][] intervals) {
 //        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
         Arrays.sort(intervals, Comparator.comparingInt(a -> a[0]));

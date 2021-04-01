@@ -19,7 +19,7 @@ import java.util.Queue;
  *
  */
 
-public class _LC102_BinaryTreeLevelOrderTraversal {
+public class LC102_BinaryTreeLevelOrderTraversal {
     public List<List<Integer>> levelOrder(TreeNode root) {
         if (root == null) return null;
         List<List<Integer>> ans = new ArrayList<>();
