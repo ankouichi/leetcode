@@ -47,7 +47,7 @@ public class LC102_LevelOrderTraversal {
 
 
     /**
-     * Solution 2:
+     * Solution 2: Recursive
      * @param root
      * @return
      */
