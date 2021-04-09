@@ -49,14 +49,12 @@ public class TrieWithHashMap {
             map = tmpTrie.children;
         }
 
-        // System.out.println(tmpTrie.isWord);
-
         return tmpTrie.isWord;
     }
 
     /** Returns if there is any word in the trie that starts with the given prefix. */
     public boolean startsWith(String prefix) {
-        TrieWithHashMap tmpTrie = new TrieWithHashMap();
+        TrieWithHashMap tmpTrie;
         Map<Character, TrieWithHashMap> map = children;
         for (int i = 0; i < prefix.length(); i++) {
             Character c = prefix.charAt(i);
@@ -71,11 +69,12 @@ public class TrieWithHashMap {
 
     public static void main(String[] args) {
         TrieWithHashMap trie = new TrieWithHashMap();
+        System.out.println("contains apple: " + trie.search("apple"));
+        System.out.println("insert apple");
         trie.insert("apple");
-        System.out.println(trie.search("apple"));
-//        System.out.println(trie.startsWith("apple"));
-//        System.out.println();
-//        System.out.println(trie.search("app"));
-//        System.out.println(trie.startsWith("app"));
+        System.out.println("contains apple: " + trie.search("apple"));
+        System.out.println("starts with apple: " + trie.startsWith("apple"));
+        System.out.println("search app: " + trie.search("app"));
+        System.out.println("starts with app: " +  trie.startsWith("app"));
     }
 }

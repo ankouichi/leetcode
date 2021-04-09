@@ -2,14 +2,20 @@ package org.example.structure.trie;
 
 /**
  * Created by ankouichi on 3/7/21
+ *
+ * using array to represent Trie Node
+ *
+ * Pro: fast since access by index takes O(1) time.
+ * Con: a waste of space since we assume there are 26 children for each node.
+ *
  */
 
 public class TrieNode {
-    private TrieNode[] links;
-    private final int R = 26;
+    private final TrieNode[] links;
     private boolean isEnd;
+
     public TrieNode() {
-        links = new TrieNode[R];
+        links = new TrieNode[26];
     }
 
     public boolean containsKey(char ch) {

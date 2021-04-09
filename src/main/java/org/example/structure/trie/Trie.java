@@ -10,6 +10,13 @@ public class Trie {
         root = new TrieNode();
     }
 
+    // Insert a word into the trie
+    // Time - O(m), where m is the key's length. Since in each iteration, we either examine or create a node in the
+    // trie till we reach the end of the word
+
+    // Space - O(m), in the worst case, newly inserted key doesn't share a prefix with the keys already inserted in
+    // the trie. We have to add m new nodes, which takes O(m) spaces.
+    //
     public void insert(String word) {
         TrieNode node = root;
         for (int i = 0; i < word.length(); i++) {
@@ -22,6 +29,14 @@ public class Trie {
         node.setEnd();
     }
 
+    /**
+     * search a prefix or whole key in trie and return the node where search ends
+     * Time - O(m)
+     * Space - O(1)
+     *
+     * @param word
+     * @return
+     */
     private TrieNode searchPrefix(String word) {
         TrieNode node = root;
         for (int i = 0; i < word.length(); i++) {
@@ -35,11 +50,13 @@ public class Trie {
         return node;
     }
 
+    // Return if the word is in the trie
     public boolean search(String word) {
         TrieNode node = searchPrefix(word);
         return node != null && node.isEnd();
     }
 
+    // Return if there is any word in the tree that starts with the given prefix
     public boolean startsWith(String prefix) {
         TrieNode node = searchPrefix(prefix);
         return node != null;
