@@ -8,7 +8,7 @@ import java.util.*;
 
 public class PreOrder {
     public static void main(String[] args) {
-        TreeNode node1 = TreeNode.testNode();
+        TreeNode node1 = TreeNode.generateCBT();
         List<Integer> list = new PreOrder().preorderTraversal3(node1);
         System.out.println("Result by recursion: " + list);
         System.out.println();

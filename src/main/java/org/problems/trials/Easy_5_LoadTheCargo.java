@@ -1,4 +1,4 @@
-package org.problems;
+package org.problems.trials;
 
 import java.awt.*;
 import java.util.Arrays;

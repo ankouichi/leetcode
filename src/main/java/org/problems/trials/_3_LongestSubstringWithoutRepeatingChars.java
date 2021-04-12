@@ -1,4 +1,4 @@
-package org.problems;
+package org.problems.trials;
 
 import java.util.HashMap;
 import java.util.Map;

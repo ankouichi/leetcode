@@ -1,4 +1,4 @@
-package org.problems;
+package org.problems.trials;
 
 /**
  * Created by ankouichi on 3/10/21

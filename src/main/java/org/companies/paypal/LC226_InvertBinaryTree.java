@@ -4,6 +4,8 @@ import org.example.structure.binarytree.TreeNode;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import static org.example.structure.binarytree.LevelOrder.printLevelOrder;
+
 /**
  * Given the root of a binary tree, invert the tree, and return its root.
  *
@@ -58,34 +60,9 @@ public class LC226_InvertBinaryTree {
         return root;
     }
 
-    private void printLevelOrder(TreeNode root) {
-        if (root == null) return;
-        Queue<TreeNode> queue = new LinkedList<>();
-        queue.add(root);
-        while (!queue.isEmpty()) {
-            int queue_len = queue.size();
-            for (int i = 0; i < queue_len; i++) {
-                TreeNode tmp = queue.remove();
-                System.out.print(tmp.val + " ");
-                if (tmp.left != null) queue.add(tmp.left);
-                if (tmp.right != null) queue.add(tmp.right);
-            }
-            System.out.println();
-        }
-    }
-
     public static void main(String[] args) {
-        TreeNode node1 = new TreeNode(1);
-        TreeNode node3 = new TreeNode(3);
-        TreeNode node6 = new TreeNode(6);
-        TreeNode node9 = new TreeNode(9);
-        TreeNode node2 = new TreeNode(2, node1, node3);
-        TreeNode node7 = new TreeNode(7, node6, node9);
-        TreeNode node4 = new TreeNode(4, node2, node7);
-
-        LC226_InvertBinaryTree solution = new LC226_InvertBinaryTree();
-
-        solution.printLevelOrder(node4);
+        TreeNode node4 = TreeNode.generateCBT();
+        printLevelOrder(node4);
         System.out.println();
 
 //        System.out.println("Recursive Solution: ");
@@ -94,7 +71,7 @@ public class LC226_InvertBinaryTree {
 //        System.out.println();
 
         System.out.println("Iterative Solution: ");
-        TreeNode inverted2 = solution.invertTree2(node4);
-        solution.printLevelOrder(inverted2);
+        TreeNode inverted2 = new LC226_InvertBinaryTree().invertTree2(node4);
+        printLevelOrder(inverted2);
     }
 }

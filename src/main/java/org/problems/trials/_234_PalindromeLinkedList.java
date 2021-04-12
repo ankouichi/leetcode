@@ -1,4 +1,4 @@
-package org.problems;
+package org.problems.trials;
 
 import org.example.structure.linkedlist.ListNode;
 

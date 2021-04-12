@@ -11,7 +11,7 @@ import java.util.List;
 
 public class PostOrder {
     public static void main(String[] args) {
-        TreeNode node1 = TreeNode.testNode();
+        TreeNode node1 = TreeNode.generateCBT();
         List<Integer> list = new PostOrder().postorderTraversalIteratively(node1);
         System.out.println("Post Order: " + list);
     }

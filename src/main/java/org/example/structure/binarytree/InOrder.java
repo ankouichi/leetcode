@@ -10,7 +10,7 @@ import java.util.Stack;
 
 public class InOrder {
     public static void main(String[] args) {
-        TreeNode node1 = TreeNode.testNode();
+        TreeNode node1 = TreeNode.generateCBT();
         List<Integer> list = new InOrder().inorderTraversalByRecursion(node1);
         System.out.println("Result by recursion: " + list);
         System.out.println();
