@@ -1,6 +1,6 @@
 package org.problems.recursion;
 
-import org.example.structure.binarytree.LevelOrder;
+//import org.example.structure.binarytree.LevelOrder;
 import org.example.structure.binarytree.TreeNode;
 
 /**
@@ -30,10 +30,10 @@ public class LC700_Easy_SearchBST {
     }
 
     public static void main(String[] args) {
-        TreeNode node = TreeNode.generateBST();
-        LevelOrder.printLevelOrder(node);
-        int val = 2;
-        TreeNode result = searchBST(node, val);
-        LevelOrder.printLevelOrder(result);
+//        TreeNode node = TreeNode.generateBST();
+//        LevelOrder.printLevelOrder(node);
+//        int val = 2;
+//        TreeNode result = searchBST(node, val);
+//        LevelOrder.printLevelOrder(result);
     }
 }
