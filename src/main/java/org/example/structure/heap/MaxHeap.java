@@ -7,11 +7,9 @@ package org.example.structure.heap;
 public class MaxHeap {
     private int[] heap;
     private int size;
-
     public MaxHeap(int maxSize) {
         this.size = 0;
         heap = new int[maxSize + 1];
-        //
         heap[0] = Integer.MAX_VALUE;
     }
 
@@ -28,7 +26,7 @@ public class MaxHeap {
     }
 
     private boolean isLeaf(int pos) {
-        return (2 * pos >= size) && (pos <= size);
+        return (2 * pos > size) && (pos <= size);
     }
 
     private void swap(int fPos, int sPos) {
@@ -38,16 +36,15 @@ public class MaxHeap {
     }
 
     public void maxHeapify(int pos) {
-        if (isLeaf(pos))
-            return;
-
-        if (heap[pos] < leftChild(pos) || heap[pos] < rightChild(pos)) {
-            if (leftChild(pos) < rightChild(pos)) {
+        if (isLeaf(pos)) return;
+        if (heap[pos] < heap[leftChild(pos)] || heap[pos] < heap[rightChild(pos)]) {
+            if (heap[leftChild(pos)] < heap[rightChild(pos)]) {
                 swap(pos, rightChild(pos));
-                return;
+                maxHeapify(rightChild(pos));
+            } else {
+                swap(pos, leftChild(pos));
+                maxHeapify(leftChild(pos));
             }
-
-            swap(pos, leftChild(pos));
         }
     }
 
@@ -60,6 +57,7 @@ public class MaxHeap {
         }
     }
 
+    // extract max means removing the maximum value from the heap
     public int extractMax() {
         int popped = heap[1];
         heap[1] = heap[size--];

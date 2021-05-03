@@ -16,10 +16,10 @@ public class TreeNode {
         this.right = right;
     }
 
-    /**
+    /** Complete Binary Tree
      *        1
      *    2       3
-     * 4    5  null  6
+     * 4    5   6   null
      * @return
      */
     public static TreeNode generateCBT() {
@@ -27,10 +27,16 @@ public class TreeNode {
         TreeNode node5 = new TreeNode(5, null, null);
         TreeNode node6 = new TreeNode(6, null, null);
         TreeNode node2 = new TreeNode(2, node4, node5);
-        TreeNode node3 = new TreeNode(3, null, node6);
+        TreeNode node3 = new TreeNode(3, node6, null);
         return new TreeNode(1, node2, node3);
     }
 
+    /** Balanced Search Tree
+     *        4
+     *    2       6
+     * 1    3   5   null
+     * @return
+     */
     public static TreeNode generateBST() {
         TreeNode node1 = new TreeNode(1, null, null);
         TreeNode node3 = new TreeNode(3, null, null);
