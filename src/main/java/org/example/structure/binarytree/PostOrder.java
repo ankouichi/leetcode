@@ -32,7 +32,7 @@ public class PostOrder {
 
             TreeNode node = stack.pop();
             res.add(node.val);
-            System.out.println(res);
+//            System.out.println(res);
             if (!stack.isEmpty() && node.equals(stack.peek().left)) {
                 cur = stack.peek().right;
             }
