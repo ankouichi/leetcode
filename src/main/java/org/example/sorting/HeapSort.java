@@ -11,18 +11,18 @@ package org.example.sorting;/**
 public class HeapSort {
 
     /**
-     *
+     * totally O(n*log n)
      * @param arr
      */
     public void sort(int[] arr) {
         int n = arr.length;
         // build heap (rearrange array)
+        // O(n)
         for (int i = n / 2 - 1; i >= 0; i--)
             heapify(arr, n, i);
 
-//        printArray(arr);
-
         // one by one extract an element from heap
+        // O(n * log n)
         for (int i = n - 1; i > 0; i--) {
             int temp = arr[0];
             arr[0] = arr[i];
@@ -34,6 +34,7 @@ public class HeapSort {
     }
 
     /**
+     * O(log n)
      * heapify a subtree rooted with node i which is
      * an index in arr[]. n is the size of heap
      * @param arr
@@ -49,7 +50,6 @@ public class HeapSort {
         if (r < n && arr[r] > arr[largest])
             largest = r;
         if (largest != i) {
-//            printArray(arr);
             int swap = arr[i];
             arr[i] = arr[largest];
             arr[largest] = swap;

@@ -5,7 +5,7 @@ package org.example.structure.heap;
  */
 
 public class MaxHeap {
-    private int[] heap;
+    private final int[] heap;
     private int size;
     public MaxHeap(int maxSize) {
         this.size = 0;
@@ -29,12 +29,14 @@ public class MaxHeap {
         return (2 * pos > size) && (pos <= size);
     }
 
+    // O(1)
     private void swap(int fPos, int sPos) {
         int tmp = heap[fPos];
         heap[fPos] = heap[sPos];
         heap[sPos] = tmp;
     }
 
+    // O(Log n)
     public void maxHeapify(int pos) {
         if (isLeaf(pos)) return;
         if (heap[pos] < heap[leftChild(pos)] || heap[pos] < heap[rightChild(pos)]) {
@@ -48,6 +50,7 @@ public class MaxHeap {
         }
     }
 
+    // O(Log n)
     public void insert(int value) {
         heap[++size] = value;
         int cur = size;
@@ -57,6 +60,7 @@ public class MaxHeap {
         }
     }
 
+    // O(Log n)
     // extract max means removing the maximum value from the heap
     public int extractMax() {
         int popped = heap[1];
