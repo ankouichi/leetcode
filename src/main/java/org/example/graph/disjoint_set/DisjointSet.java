@@ -42,14 +42,14 @@ public class DisjointSet {
         int x_rep = find(x);
         int y_rep = find(y);
         if (x_rep == y_rep) return;
-        int x_rank = rank[x];
-        int y_rank = rank[y];
+        int x_rank = rank[x_rep];
+        int y_rank = rank[y_rep];
         if (x_rank > y_rank)
-            parent[y] = x_rep;
+            parent[y_rep] = x_rep;
         else {
-            parent[x] = y_rep;
+            parent[x_rep] = y_rep;
             if (x_rank == y_rank)
-                rank[y]++;
+                rank[y_rep]++;
         }
     }
 
